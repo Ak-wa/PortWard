@@ -64,7 +64,15 @@ with the following content:
 **NOTE**: if you want to know what you are doing, here's the manual: https://marlam.de/msmtp/msmtp.html   
       same applies if you want to **encrypt the password** and not store it in the config.   
       
-#### Step 3: Crontab (optional)
+## Usage
+### 1. Command line   
+`python3 portward.py <hostfile> <emailfile>`   
+`<hostfile>` is your file of target hosts to scan    
+`<emailfile>` is your file of emails to send the reports to
+
+
+### 2. Crontab
+
 ```bash
 mkdir /usr/share/portward
 cp hostfile.txt /usr/share/hostfile.txt
