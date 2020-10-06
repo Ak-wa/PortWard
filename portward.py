@@ -20,7 +20,7 @@ Following IPs have critical ports open:
         with open(self.emailfile) as emails:
             for email in emails:
                 email = email.rstrip()
-                self.mailcommand = f"echo '{self.result}' | mail -s 'PortWard Bedrohung gefunden' {email}"
+                self.mailcommand = f"echo '{self.result}' | mail -s 'PortWard Threat identified' {email}"
                 
                 print(f"[+] Sending email out to {email}")
                 os.system(self.mailcommand)
@@ -59,7 +59,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     
     parser.add_argument("hostfile", help="host/target file to scan")
-    parser.add_argument("emailfile", help="email to send results to")
+    parser.add_argument("emailfile", help="emails to send results to")
     args = parser.parse_args()
     portward = PortWard(hostfile=args.hostfile,emailfile=args.emailfile)
     portward.run()
