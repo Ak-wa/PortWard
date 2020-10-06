@@ -4,7 +4,7 @@
 ![lastcommit](https://img.shields.io/github/last-commit/ak-wa/PortWard.svg)
 ![follow](https://img.shields.io/github/followers/ak-wa.svg?label=Follow&style=social)     
 
-PortWard is a tool delevoped for checking a list of assets/hosts for critical ports (e.g RDP) and sending an email to you with the results, in case of a critical port being open.   
+PortWard is a tool developed for checking a list of assets/hosts for critical ports (e.g RDP) and sending an email to you with the results, in case of a critical port being open.   
 
 ## How does it work?  
 * PortWard checks a list of IPs/hostnames for specific Ports using nmap
