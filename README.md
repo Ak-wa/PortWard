@@ -61,6 +61,11 @@ Define mail program:
 ```nano /etc/mail.rc```
 with the following content:   
 ```set sendmail="/usr/bin/msmtp -t"```   
+
+If you want to change the ports scanned or somehow change the nmap command used, yet in code you have to change the following line:   
+```line 35: output = subprocess.Popen(f"nmap {target} -p3389-3395 --open -Pn | grep open", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True).communicate()[0]```   
+
+
 **NOTE**: if you want to know what you are doing, here's the manual: https://marlam.de/msmtp/msmtp.html   
       same applies if you want to **encrypt the password** and not store it in the config.   
       
