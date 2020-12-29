@@ -77,14 +77,16 @@ If you want to change the ports scanned or somehow change the nmap command used,
 
 
 ### 2. Crontab
-
+In the cloned PortWard folder:  
 ```bash
 mkdir /usr/share/portward
 cp hostfile.txt /usr/share/hostfile.txt
 cp emailfile.txt /usr/share/emailfile.txt
+cp portward.py /usr/share/portward/portward.py
 ```
 `crontab -e` with the following **example** content:   
 ```*/5 * * * *  /usr/bin/python3 /usr/share/portward/portward.py /usr/share/portward/hostfile.txt /usr/share/portward/emailfile.txt | tee /usr/share/portward/portward.log```   
-Attention, in this example configuration it will scan the IPs every **5 Minutes**, so make sure to change that.
+Attention, in this example configuration it will scan the IPs every **5 Minutes**, so make sure to change that.   
+With `tee` you can keep a log of the portward scan, in the example crontab it defaults to `/usr/share/portward/portward.log`
 
 
