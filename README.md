@@ -21,7 +21,7 @@ PortWard is a tool developed for checking a list of assets/hosts for critical po
 ## Setup (Tested on Debian 10 Buster & Kali Linux 2020.1)   
 #### Step 1 - prerequisites
 ```bash
-apt install msmtp msmtp-mta mailutils 
+apt install msmtp msmtp-mta mailutils nmap
 git clone https://github.com/Ak-wa/PortWard.git
 cd PortWard
 pip3 install -r requirements.txt
